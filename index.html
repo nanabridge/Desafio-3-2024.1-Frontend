@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Título da página -->
+  <div class="titulo-fixo">
+    <h1>IBGE</h1>
+</div>
+
+    <!-- Conteúdo Principal do desafio-->
+    <div class="container">
+        <h1>Conheça os municípios de cada estado brasileiro!</h1>
+
+        <h2><label for="estados">Estado:</label></h2>
+        <select id="estados">
+            <option value="">Selecione um estado</option>
+        </select>
+
+        <h2>Municípios</h2>
+        <ul id="municipios"></ul>
+    </div>
+
+    <!--Parte opcional-->
+    <!-- Menu Lateral -->
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    <div class="side-menu">
+        <a href="https://www.ibge.gov.br/">IBGE: site oficial</a>
+        <a href="#">Estados e municípios</a>
+    </div>
+    
+     <!-- Imagem Animada à Direita -->
+     <div class="image-container">
+        <img src="https://static.vecteezy.com/system/resources/previews/013/836/216/non_2x/brazil-political-map-divide-by-state-free-png.png" alt="Mapa" />
+    </div>
+
+</body>
+</html>

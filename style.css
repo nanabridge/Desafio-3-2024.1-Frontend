@@ -1,0 +1,184 @@
+/*Menu lateral*/
+.side-menu {
+    background-color: #ECF39E;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding-top: 50px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*Menu aberto*/
+.side-menu.open {
+    display: flex;  
+}
+
+.side-menu a {
+    color: #132A13;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.side-menu a:hover {
+    background-color:rgba(102, 151, 58, 0.69);
+}
+
+/*Botão Menu*/
+.menu-btn {
+    color: green;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .side-menu {
+        display: none;
+    }
+}
+
+/*Container da Imagem */
+.image-container {
+    position: fixed;  
+    top: 65%;  
+    right: 0;  
+    width: 300px; 
+    height: 700px;  
+    overflow: hidden;   /* Esconde a parte da imagem que ultrapassa o container */
+    transform: translateY(-50%);  /* Centraliza verticalmente */
+}
+
+/* Estilo da imagem */
+.image-container img {
+    width: 500px; 
+    height: auto;
+    object-fit: cover;  /* Garantir que a imagem se ajuste ao espaço */
+    animation: moveImage 3s ease-in-out infinite;  /* Animação */
+}
+
+/* Animação para mover a imagem */
+@keyframes moveImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3%); /* Move a imagem para a esquerda */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 500px) {
+    .image-container {
+        width: 200px; 
+    }
+    .image-container img {
+        width: 300px;  
+    }
+}
+
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+/* Título IBGE*/
+.titulo-fixo {
+    text-align: center;
+    margin-top: 50px; 
+}
+
+.titulo-fixo h1 {
+    font-size: 60px;
+    color: #333;
+    background: linear-gradient(70deg, yellow, green, blue, white);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradiente 5s linear infinite; 
+}
+
+/*Animação IBGE*/
+@keyframes gradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Caixa principal (onde fica o select) */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*Design do select*/
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+/* Lista de municípios */
+ul {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background: #fafafa;
+    text-align: left;
+}
+
+li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
