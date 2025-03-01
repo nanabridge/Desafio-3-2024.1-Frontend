@@ -57,7 +57,7 @@
     width: 300px; 
     height: 700px;  
     overflow: hidden;   /* Esconde a parte da imagem que ultrapassa o container */
-    transform: translateY(-50%);  /* Centraliza verticalmente */
+    transform: translateY(-50%);  /* Centraliza */
 }
 
 /* Estilo da imagem */
